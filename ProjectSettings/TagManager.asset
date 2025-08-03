@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Block
+  - Brick
   layers:
   - Default
   - TransparentFX
@@ -13,10 +13,10 @@ TagManager:
   - Water
   - UI
   - PickUp
-  - 
-  - 
-  - 
-  - 
+  - Bridge
+  - Ground
+  - Brick
+  - Gate
   - 
   - 
   - 
