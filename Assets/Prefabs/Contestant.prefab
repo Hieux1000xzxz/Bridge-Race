@@ -76,9 +76,10 @@ GameObject:
   - component: {fileID: 4299412815707740599}
   - component: {fileID: 4299412815707740592}
   - component: {fileID: 4299412815707740593}
+  - component: {fileID: 5880840439639744133}
   m_Layer: 0
   m_Name: Contestant
-  m_TagString: Player
+  m_TagString: Contestant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +149,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &4299412815707740599
 SphereCollider:
@@ -209,17 +210,38 @@ MonoBehaviour:
   Color: {r: 0, g: 0, b: 0, a: 0}
   animator: {fileID: 2769425508124060237}
   agent: {fileID: 4299412815707740597}
-  stackPoint: {fileID: 1048388433938824339}
+  brickStack: {fileID: 5880840439639744133}
   rayPoint: {fileID: 4299412815313318455}
   stepLayer:
     serializedVersion: 2
     m_Bits: 256
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
   skinnedMeshRenderer: {fileID: 4618472384498123592}
   rb: {fileID: 4299412815707740598}
+  navMeshCheckRadius: 1
+  groundCheckDistance: 10
+  groundCheckRadius: 0.5
+  maxAllowedHeight: 5
   brickLayer:
     serializedVersion: 2
     m_Bits: 512
   BrickMoveCount: 10
+--- !u!114 &5880840439639744133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299412815707740594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840950cbf0880b04eb0e06c39dee1600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stackPoint: {fileID: 1048388433938824339}
+  stackHeight: 0.4
 --- !u!1001 &573267446801111900
 PrefabInstance:
   m_ObjectHideFlags: 0

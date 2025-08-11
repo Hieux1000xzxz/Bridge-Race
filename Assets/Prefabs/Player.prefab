@@ -86,7 +86,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &5797817851945573483
 SphereCollider:
@@ -147,13 +147,20 @@ MonoBehaviour:
   Color: {r: 0, g: 0, b: 0, a: 0}
   animator: {fileID: 0}
   agent: {fileID: 3905493846336918679}
-  stackPoint: {fileID: 4699220588837419246}
+  brickStack: {fileID: 0}
   rayPoint: {fileID: 8706201219543373367}
   stepLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   skinnedMeshRenderer: {fileID: 3446117739809463397}
   rb: {fileID: 7772023272344368645}
+  navMeshCheckRadius: 1
+  groundCheckDistance: 10
+  groundCheckRadius: 0.5
+  maxAllowedHeight: 5
   rotationSpeed: 8
   joystick: {fileID: 0}
 --- !u!1 &4016767042893187973
