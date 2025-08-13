@@ -125,7 +125,8 @@ public class GameManager : MonoBehaviour
     {
         if (currentBridge != null && !currentBridge.IsCompleted)
             return currentBridge;
-
+        if(currentBridge != null && currentBridge.HasOtherColorBricks(characterColor))
+            return null;
         if (randomFirst)
         {
             List<BridgeController> availableBridges = new List<BridgeController>();

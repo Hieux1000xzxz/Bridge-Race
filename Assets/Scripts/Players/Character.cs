@@ -238,8 +238,6 @@ public abstract class Character : MonoBehaviour
     {
         if (isFalling || isInvincible) return;
 
-        Debug.Log($"{gameObject.name} bị đánh ngã");
-
         isFalling = true;
         isGrounded = false;
 
@@ -350,7 +348,6 @@ public abstract class Character : MonoBehaviour
         if (Physics.Raycast(rayPoint.position, rayPoint.TransformDirection(Vector3.down), out hit, 10f, stepLayer, QueryTriggerInteraction.Ignore))
         {
             Debug.DrawRay(rayPoint.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
-
             if (hit.transform.TryGetComponent(out Step step))
             {
                 if (step.Color == Color)
